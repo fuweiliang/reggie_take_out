@@ -1,0 +1,45 @@
+#应用名称
+spring:
+  application:
+    name: springboot_05_page_RELASE
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://47.113.179.151:3306/reggie?serverTimezone=UTC&useSSL=false&useServerPrepStmts=true
+      username: root
+      password: 123456
+  mail:
+    #    配置SMTP服务器地址
+    #      发送者邮箱
+    #      端口号465或857
+    host: smtp.qq.com
+    username: 2194094699@qq.com
+    password: blvsfmcemkvvdiac
+    port: 587
+    default-encoding: utf-8
+    #    配置sll加密工厂
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        #       表示开启debug模式，这样，邮件发送过程中的日志会在控制太打印出来，方便排查催促欧文
+        debug: true
+#  web:
+#    resources:
+#      static-locations: /backend/page/login/login.html
+
+## 应用服务 WEB 访问端口
+server:
+  port: 80
+mybatis-plus:
+  configuration:
+    #    在映射实体或者属性时，将数据库中的表明和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+  #    开始mybatis-plus日志
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+reggie:
+  filename: D:\img\
+

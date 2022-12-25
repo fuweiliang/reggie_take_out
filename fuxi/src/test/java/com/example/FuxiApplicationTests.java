@@ -8,6 +8,7 @@ class FuxiApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
